@@ -3,6 +3,7 @@ import './App.css'
 import { connect, sendMsg } from './api'
 import Header from './components/Header/Header'
 import ChatHistory from './components/ChatHistory'
+import ChatInput from './components/ChatInput/ChatInput'
 
 function App() {
 	const [state, setState] = useState({
@@ -19,16 +20,18 @@ function App() {
 		})
 	}, [state])
 
-	const send = () => {
-		console.log("hello");
-		sendMsg("hello");
+	const send = (event) => {
+		if (event.keyCode === 13) {
+			sendMsg(event.target.value);
+			event.target.value = "";
+		}
 	}
 
 	return (
 		<div className="App">
 			<Header />
 			<ChatHistory chatHistory={state.chatHistory} />
-			<button onClick={send}>Hit</button>
+			<ChatInput send={send} />
 		</div>
 	)
 }
