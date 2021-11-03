@@ -33,7 +33,7 @@ func setupRoutes() {
 }
 
 func main() {
-	fmt.Println("Started Habla Chat App v0.01")
+	fmt.Println("Habla Chat App v0.01")
 	setupRoutes()
 	http.ListenAndServe(":8080", nil)
 }
