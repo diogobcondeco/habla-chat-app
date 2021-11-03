@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import './App.scss'
 import { connect, sendMsg } from './api'
 import Header from './components/Header/Header'
 import ChatHistory from './components/ChatHistory'
