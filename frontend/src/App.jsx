@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react'
-import logo from './logo.svg'
+import { useEffect } from 'react'
 import './App.css'
 import { connect, sendMsg } from './api'
 
 function App() {
-	// const [count, setCount] = useState(0)
-
 	useEffect(() => {
 		connect()
 	}, [])
