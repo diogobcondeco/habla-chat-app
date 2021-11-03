@@ -1,4 +1,4 @@
-# habla-chat-app
+# Habla Chat App
 
 ## Run Backend
 ```bash
