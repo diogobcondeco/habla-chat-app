@@ -1,7 +1,19 @@
-FROM golang:1.11.1-alpine3.8
+FROM golang:1.16-alpine
+
 RUN mkdir /app
 ADD . /app/
+
 WORKDIR /app
+
+COPY go.mod ./
+COPY go.sum ./
 RUN go mod download
-RUN go build -o main ./...
-CMD ["/app/main"]
+
+COPY *.go ./
+
+RUN go build ./...
+RUN ls
+
+EXPOSE 8080
+
+CMD go run /app/main.go

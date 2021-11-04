@@ -34,7 +34,7 @@ Step 2/8 : RUN apk add bash ca-certificates git gcc g++ libc-dev
 ```
 ## Running the Backend with Docker
 ```bash
-$ docker run -it -p 8080:8080 backend
+$ docker run -i -p 8080:8080 backend
 Habla Chat App v0.01
 WebSocket Endpoint Hit
 Size of Connection Pool:  1
